@@ -1,0 +1,27 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+.bg-custom {
+    background-color: #1e1e1e;
+}
+.header-text {
+    color: #00bfae;
+}
+.card-custom {
+    border: 1px solid #333;
+}
+.btn-custom {
+    color: #00bfae;
+    border-color: #00bfae;
+}
+.btn-custom:hover {
+    background-color: #00bfae;
+    color: #fff;
+}
+.footer-icon {
+    color: #00bfae;
+}
+.footer-icon:hover {
+    color: #1de9b6;
+}
