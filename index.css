@@ -66,6 +66,96 @@ section {
     text-align: center;
 }
 
+/* Blog Section Styles */
+.blog-section {
+    padding: 2rem 0;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Container for blog posts */
+.post-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: baseline;
+}
+
+/* Individual post item */
+.post-item {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.333% - 1rem);
+    margin-bottom: 1.5rem;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.post-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+}
+
+/* Content of the post */
+.post-content {
+    padding: 0.5rem;
+}
+
+.post-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.title-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.title-link:hover {
+    color: #00bfae;
+}
+
+.post-date {
+    font-size: 0.875rem;
+    color: #00796b;
+    margin-bottom: 1rem;
+}
+
+.post-description {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #00bfae;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #2b6cb0;
+}
+
 /* Projects Section */
 .row {
     display: flex;
@@ -89,7 +179,11 @@ section {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease-in-out;
-    text-align: justify;
+    text-align: center;
+}
+
+.card-title{
+    font-size: 1.5rem; 
 }
 
 /* Card Hover Effect */
