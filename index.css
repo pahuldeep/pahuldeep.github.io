@@ -1,27 +1,254 @@
+/* General Styles */
 body {
-    background-color: #121212;
-    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
-.bg-custom {
-    background-color: #1e1e1e;
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
-.header-text {
-    color: #00bfae;
+
+/* Header */
+header {
+    padding: 1rem 0;
+    border-bottom: 1px solid #333;
 }
-.card-custom {
-    border: 1px solid #333;
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nav-links a {
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button */
 .btn-custom {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    cursor: pointer;
     color: #00bfae;
-    border-color: #00bfae;
+    border: 1px solid #00bfae;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
+
 .btn-custom:hover {
     background-color: #00bfae;
     color: #fff;
 }
+
+/* Main Sections */
+section {
+    padding: 3rem 0;
+    text-align: center; /* Ensures sections like #about are centered */
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Projects Section */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between; 
+    margin: 0 auto;
+    max-width: 1200px; 
+}
+
+.col {
+    width: 31.4%; 
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+}
+
+/* Individual Card Styling */
+.card-custom {
+    padding: 1rem;
+    border: 1px #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+    text-align: justify;
+}
+
+/* Card Hover Effect */
+.card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+footer {
+    padding: 1rem 0;
+    border-top: 1px solid #333;
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem; 
+    text-align: center; 
+}
+
 .footer-icon {
     color: #00bfae;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease, transform 0.3s ease; 
+    font-size: 1.5rem; 
 }
+
 .footer-icon:hover {
     color: #1de9b6;
+    transform: scale(1.1); /* Adds a subtle zoom effect on hover */
+}
+
+/* Back-to-Top Button */
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #00bfae;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+#back-to-top:hover {
+    background-color: #1de9b6;
+    transform: scale(1.1);
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .bg-custom {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .header-text {
+    color: #00bfae;
+}
+
+.dark-mode .card-custom {
+    background-color: #222;
+    border-color: #333;
+}
+
+.dark-mode .footer-icon {
+    color: #00bfae;
+}
+
+/* Light Mode Styles */
+.light-mode {
+    background-color: #ffffff; 
+    color: #333333; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.light-mode .bg-custom {
+    background-color: #f8f9fa; 
+}
+
+.light-mode .header-text {
+    color: #00796b;
+    font-weight: 600; 
+}
+
+.light-mode .card-custom {
+    background-color: #ffffff; 
+    border: 1px solid #ddd; 
+    color: #333; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease;
+}
+
+.light-mode .card-custom:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px); 
+}
+
+.light-mode .btn-custom {
+    color: #00796b;  
+    border: 1px solid #00796b;  
+    background-color: transparent;  
+    border-radius: 5px;  
+    padding: 0.5rem 1rem; 
+    transition: all 0.3s ease;  
+}
+
+.light-mode .btn-custom:hover {
+    background-color: #00796b;  
+    color: #ffffff; 
+}
+
+.light-mode .footer-icon {
+    color: #00796b; 
+    font-size: 1.2rem;  
+    transition: color 0.3s ease;
+}
+
+.light-mode .footer-icon:hover {
+    color: #009688;  
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem; /* Adds spacing between header items */
+    }
+
+    .nav-links {
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-custom {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    footer .container {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .col {
+        width: 100%;
+    }
 }
