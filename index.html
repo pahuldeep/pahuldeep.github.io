@@ -4,120 +4,1348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary Meta Tags -->
-    <title>Pahuldeep Singh | Software Engineer, Product Specialist & Tech Founder</title>
+    <title>Pahuldeep Singh | AI Specialist & Software Developer</title>
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="description" content="Portfolio of Pahuldeep Singh - Product Specialist and Software Engineer specializing in full-stack development, AI/ML, and tech innovation. View projects, technical skills, and professional experience.">
-    <meta name="keywords" content="Pahuldeep Singh, Full Stack Developer, Product Specialist, AI/ML Engineer, Tech Founder, Software Development, Portfolio, Web Development, Technology Innovation">
+    <meta name="description"
+        content="Portfolio of Pahuldeep Singh - AI Specialist and Software Developer specializing in AI/ML, full-stack development, and tech innovation. View projects, technical skills, and professional experience.">
+    <meta name="keywords"
+        content="Pahuldeep Singh, AI Specialist, Software Developer, AI/ML Engineer, Full Stack Developer, Tech Founder, Portfolio, DRDO, CDAC">
     <meta name="author" content="Pahuldeep Singh">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Pahuldeep Singh Portfolio">
-    <meta property="og:title" content="Pahuldeep Singh | Software Engineer & Product Specialist">
-    <meta property="og:description" content="Discover Pahuldeep Singh's innovative tech projects, software engineering expertise, and product development journey. Full-stack developer focused on creating impactful solutions.">
+    <meta property="og:title" content="Pahuldeep Singh | AI Specialist & Software Developer">
+    <meta property="og:description"
+        content="Discover Pahuldeep Singh's innovative AI projects, software engineering expertise, and product development journey.">
     <meta property="og:url" content="https://pahuldeep.github.io">
     <meta property="og:locale" content="en_US">
-    <!-- Replace with an actual hosted image URL - Instagram links won't work reliably -->
     <meta property="og:image" content="https://pahuldeep.github.io/assets/pahuldeep_new.jpg">
-    <meta property="og:image:alt" content="Pahuldeep Singh - Software Engineer and Product Specialist">
-    
+    <meta property="og:image:alt" content="Pahuldeep Singh - AI Specialist and Software Developer">
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@pahuldeep_">
-    <meta name="twitter:title" content="Pahuldeep Singh | Software Engineering & Product Development">
-    <meta name="twitter:description" content="Explore my journey in tech innovation, software engineering projects, and product development. Full-stack developer passionate about creating meaningful solutions.">
-    <!-- Replace with an actual hosted image URL -->
+    <meta name="twitter:title" content="Pahuldeep Singh | AI Engineering & Software Development">
+    <meta name="twitter:description"
+        content="Explore my journey in AI innovation, software engineering projects, and product development.">
     <meta name="twitter:image" content="https://pahuldeep.github.io/assets/pahuldeep_new.jpg">
     <meta name="twitter:image:alt" content="Pahuldeep Singh's Portfolio">
-    
+
     <!-- Canonical Link -->
     <link rel="canonical" href="https://pahuldeep.github.io">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://pahuldeep.github.io/assets/pahuldeep_new.jpg">
     <link rel="apple-touch-icon" href="https://pahuldeep.github.io/assets/pahuldeep_new.jpg">
-    
+
     <!-- External Resources -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="assets/index.css">
-    
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #222;
+            --secondary-color: #00bfae;
+            --accent-color: #313647;
+            --text-dark: #313131;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --gradient-start: #06202B;
+            --gradient-end: #313647;
+        }
+
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+            min-height: 100vh;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            background-color: var(--bg-light);
+            color: var(--secondary-color);
+        }
+
+        /* Button */
+        .btn-custom {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            color: var(--secondary-color);
+            border: 2px solid var(--secondary-color);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-weight: 600;
+            background: transparent;
+        }
+
+        .btn-custom:hover {
+            background-color: var(--secondary-color);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 191, 174, 0.3);
+        }
+
+        #theme-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--secondary-color);
+            color: white;
+            border: 2px solid var(--secondary-color);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--secondary-color);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Main Sections */
+        section {
+            padding: 80px 20px;
+            background: var(--bg-white);
+        }
+
+        section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--secondary-color);
+            top: 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            width: calc(50% - 2rem);
+        }
+
+        .timeline-item:nth-child(odd) {
+            margin-left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            margin-left: calc(50% + 2rem);
+            text-align: left;
+        }
+
+        .timeline-content {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--secondary-color);
+            border: 4px solid var(--bg-white);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -62px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -62px;
+        }
+
+        .timeline-date {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .timeline-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-company {
+            color: var(--text-light);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Blog Section */
+        .blog-section {
+            padding: 80px 20px;
+        }
+
+        .post-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .post-item {
+            background: var(--bg-white);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .post-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background: var(--bg-light);
+            overflow: hidden;
+        }
+
+        .post-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .post-item:hover .post-image {
+            transform: scale(1.1);
+        }
+
+        .post-content {
+            padding: 2rem;
+        }
+
+        .post-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .post-date {
+            font-size: 0.875rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .post-description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            gap: 1rem;
+            color: var(--accent-color);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--accent-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-year {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: var(--primary-color);
+            color: #e0e0e0;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: black;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .footer-icon {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-icon:hover {
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Back-to-Top Button */
+        #back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary-color);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 191, 174, 0.4);
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        #back-to-top:hover {
+            background: var(--accent-color);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 191, 174, 0.5);
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        }
+
+        .dark-mode header {
+            background: rgba(30, 30, 30, 0.95);
+        }
+
+        .dark-mode header h1,
+        .dark-mode .nav-links a {
+            color: #e0e0e0;
+        }
+
+        .dark-mode section {
+            background: #1a1a1a;
+        }
+
+        .dark-mode section:nth-child(even) {
+            background: #222;
+        }
+
+        .dark-mode .skill-card,
+        .dark-mode .timeline-content,
+        .dark-mode .post-item,
+        .dark-mode .project-card {
+            background: #2a2a2a;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .section-title,
+        .dark-mode .timeline-title,
+        .dark-mode .post-title,
+        .dark-mode .project-title {
+            color: #ffffff;
+        }
+
+        /* Loading Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-item {
+                width: 100%;
+                margin-left: 2rem !important;
+                text-align: left !important;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-dot,
+            .timeline-item:nth-child(even) .timeline-dot {
+                left: -42px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+            }
+
+            #hero {
+                padding: 60px 20px;
+            }
+
+            .hero-content h2 {
+                font-size: 1.75rem;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .projects-grid,
+            .post-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Pahuldeep Singh",
-        "jobTitle": ["Product Specialist", "Software Engineer", "Tech Founder"],
+        "jobTitle": ["AI Specialist", "Software Developer", "Tech Founder"],
         "url": "https://pahuldeep.github.io",
-        "email": "mailto:pahuldeep@gmail.com",
-        "description": "Full-stack software engineer and product specialist with expertise in web development, AI/ML, and technology innovation.",
+        "email": "mailto:Pahuldeep100@gmail.com",
+        "telephone": "+91-7696221709",
+        "description": "AI Specialist and Software Developer with expertise in AI/ML, deep learning, and full-stack development.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Patiala",
+            "addressRegion": "Punjab",
+            "addressCountry": "IN"
+        },
         "sameAs": [
             "https://www.linkedin.com/in/pahuldeep",
             "https://twitter.com/pahuldeep_",
             "https://github.com/pahuldeep"
         ],
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Punjabi University, Patiala"
+        },
         "knowsAbout": [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Deep Learning",
             "Software Engineering",
-            "Product Development",
-            "Full Stack Development",
-            "AI/ML",
-            "Robotics",
+            "Python",
+            "C++",
+            "PyTorch",
+            "TensorFlow",
+            "Computer Vision"
         ]
     }
     </script>
 </head>
 
-<body>
-    <header class="bg-custom">
+<body class="dark-mode">
+    <header>
         <div class="container">
             <div class="header-content">
-                <h1 class="header-text">Pahuldeep Singh</h1>
+                <h1>Pahuldeep Singh</h1>
                 <nav class="nav-links">
-                    <a href="#about" class="btn-custom">About</a>
-                    <a href="#projects" class="btn-custom">Projects</a>
-                    <a href="https://www.linkedin.com/in/pahuldeep" class="btn-custom">LinkedIn</a>                    
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#blog-posts">Blog</a>
+                    <a href="resume.html" target="_blank">Resume</a>
                 </nav>
-                <button id="theme-toggle" class="btn-custom">Dark Mode</button>
+                <button id="theme-toggle" class="btn-custom">
+                    <i class="fas fa-sun"></i> Light Mode
+                </button>
             </div>
         </div>
     </header>
 
     <main>
-        <section id="about" class="text-center">
-            <!-- Content dynamically rendered by JavaScript -->
-        </section>
-
-        <section id="blog-posts" class="container mx-auto py-16 px-4">
-            <h2 class="text">Latest Blog Posts</h2>
-            <div id="medium-posts">
-                <!-- Posts will be dynamically inserted here -->
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content fade-in">
+                <h2>AI Specialist & Software Developer</h2>
+                <p class="hero-subtitle">Building Intelligent Solutions for Tomorrow</p>
+                <p class="hero-description">
+                    Innovative software developer specializing in AI/ML, deep learning, and full-stack development.
+                    Passionate about creating scalable solutions that make a real-world impact.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn-custom btn-primary">View Projects</a>
+                    <a href="https://www.linkedin.com/in/pahuldeep" class="btn-custom btn-secondary"
+                        target="_blank">Connect on LinkedIn</a>
+                </div>
             </div>
         </section>
 
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">
+                        Results-driven software developer with expertise in AI solutions and software optimization
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card fade-in">
+                        <h3><i class="fas fa-brain"></i> AI & Machine Learning</h3>
+                        <p>PyTorch, TensorFlow, Hugging Face, scikit-learn, LangChain, Computer Vision, Deep Learning,
+                            GANs</p>
+                    </div>
+                    <div class="skill-card fade-in">
+                        <h3><i class="fas fa-code"></i> Programming</h3>
+                        <p>Python, C++, JavaScript, React, Qt, CUDA, OpenCV, FastAPI, HTML/CSS</p>
+                    </div>
+                    <div class="skill-card fade-in">
+                        <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                        <p>Git, Docker, Kubernetes, Linux, Redis, Apache Kafka, Llama.cpp, GPT, LLM</p>
+                    </div>
+                    <div class="skill-card fade-in">
+                        <h3><i class="fas fa-project-diagram"></i> Methodologies</h3>
+                        <p>Agile Development, DevOps, System Design, API Development, Database Management</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Work Experience</h2>
+                    <p class="section-subtitle">Building innovative AI solutions across diverse domains</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">March 2024 – March 2025</div>
+                            <h3 class="timeline-title">AI Engineer Freelance</h3>
+                            <p class="timeline-company">Techoswalk Technologies</p>
+                            <p class="timeline-description">
+                                Delivered scalable AI engineering solutions, built AI-powered startup platform from
+                                scratch,
+                                and designed Prompt SaaS product for AI-based automation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">January 2023 – January 2024</div>
+                            <h3 class="timeline-title">AI Research Apprentice</h3>
+                            <p class="timeline-company">DRDO, Bengaluru</p>
+                            <p class="timeline-description">
+                                Improved tracking and classification accuracy using OpenCV, enhanced image translation
+                                with PyTorch-based deep learning models, and optimized image processing pipelines using
+                                Qt and C++.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">July 2022 – December 2022</div>
+                            <h3 class="timeline-title">Project Associate</h3>
+                            <p class="timeline-company">CDAC, Chandigarh</p>
+                            <p class="timeline-description">
+                                Built deep learning models for ECG classification, processed 10,000+ ECG signals,
+                                and improved classification accuracy by 15% using TensorFlow and Keras.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Posts Section -->
+        <section id="blog-posts" class="blog-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Latest Blog Posts</h2>
+                    <p class="section-subtitle">Insights on AI, software development, and technology</p>
+                </div>
+                <div id="medium-posts" class="post-container">
+                    <!-- Posts will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
         <section id="projects">
             <div class="container">
-                <h2 class="header-text text-center">Projects</h2>
+                <h2 class="section-header text-center">Projects</h2>
                 <div class="row">
                     <!-- Projects dynamically rendered by JavaScript -->
                 </div>
             </div>
         </section>
 
+        <!-- <section id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Innovative solutions across AI, web development, and automation</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card fade-in">
+                        <span class="project-year">2025</span>
+                        <h3 class="project-title">Food-Service App</h3>
+                        <p class="project-description">
+                            Meal-service mobile application currently in development with modern UI/UX and real-time
+                            features.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Mobile App</span>
+                            <span class="tag">React Native</span>
+                            <span class="tag">API Integration</span>
+                        </div>
+                    </div>
 
+                    <div class="project-card fade-in">
+                        <span class="project-year">2025</span>
+                        <h3 class="project-title">AI-Services Website</h3>
+                        <p class="project-description">
+                            AI-based services platform for cross-platform applications with automated workflows.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Full Stack</span>
+                            <span class="tag">SaaS</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <span class="project-year">2024</span>
+                        <h3 class="project-title">Reinforcement Learning Agents</h3>
+                        <p class="project-description">
+                            Automation solutions for websites and stock-trading using advanced Reinforcement Learning
+                            algorithms.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">RL</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <span class="project-year">2023</span>
+                        <h3 class="project-title">Generative Image Translations</h3>
+                        <p class="project-description">
+                            2D to 3D satellite image generation using Generative Adversarial Networks (GANs).
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">GANs</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">PyTorch</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <span class="project-year">2022</span>
+                        <h3 class="project-title">Multimodal ECG Classification</h3>
+                        <p class="project-description">
+                            Pediatric healthcare project for ECG signal analysis and classification using deep learning.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Healthcare</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Signal Processing</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <span class="project-year">2020</span>
+                        <h3 class="project-title">Music Genre Classifier</h3>
+                        <p class="project-description">
+                            Deep Learning model for music genre classification with Django web application interface.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">Audio Processing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Let's Build Something Amazing Together</h2>
+                <p>I'm always interested in hearing about new projects and opportunities.</p>
+                <div class="hero-cta">
+                    <a href="mailto:Pahuldeep100@gmail.com" class="btn-custom btn-primary">
+                        <i class="fas fa-envelope"></i> Get In Touch
+                    </a>
+                    <a href="resume.html" class="btn-custom btn-secondary" target="_blank">
+                        <i class="fas fa-file-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="bg-custom">
-        <div class="container text-center">
-            <a href="https://github.com/pahuldeep" class="footer-icon"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/pahuldeep" class="footer-icon"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/pahuldeep_" class="footer-icon"><i class="fab fa-twitter"></i></a>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pahuldeep Singh</h3>
+                    <p>AI Specialist & Software Developer</p>
+                    <p>Building intelligent solutions for tomorrow</p>
+                    <div class="social-links">
+                        <a href="https://github.com/pahuldeep" class="footer-icon" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/pahuldeep" class="footer-icon" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/pahuldeep_" class="footer-icon" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#blog-posts">Blog</a></li>
+                        <li><a href="resume.html" target="_blank">Resume</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:Pahuldeep100@gmail.com">Pahuldeep100@gmail.com</a></li>
+                        <li><a href="tel:+917696221709">+91-7696221709</a></li>
+                        <li>Patiala, Punjab, India</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pahuldeep Singh. All rights reserved.</p>
+            </div>
         </div>
-        <button id="back-to-top" class="btn-custom">↑ Top</button>
     </footer>
 
-    <script src="assets/index.js" defer></script>
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // Enhanced Theme Toggle
+            document.getElementById('theme-toggle').addEventListener('click', function () {
+                document.body.classList.toggle('dark-mode');
+                document.body.classList.toggle('light-mode');
+
+                const icon = this.querySelector('i');
+                const text = this.childNodes[1];
+
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.className = 'fas fa-sun';
+                    text.textContent = ' Light Mode';
+                } else {
+                    icon.className = 'fas fa-moon';
+                    text.textContent = ' Dark Mode';
+                }
+
+                // Save preference
+                localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+            });
+
+            // Load saved theme
+            window.addEventListener('DOMContentLoaded', () => {
+                const savedTheme = localStorage.getItem('theme') || 'dark';
+                if (savedTheme === 'light') {
+                    document.getElementById('theme-toggle').click();
+                }
+            });
+
+            // Back to Top Button
+            const backToTop = document.getElementById('back-to-top');
+
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTop.style.display = 'block';
+                } else {
+                    backToTop.style.display = 'none';
+                }
+            });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Intersection Observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                observer.observe(el);
+            });
+
+            // // Fetch and render "About Me" section
+            // fetch("https://api.github.com/users/pahuldeep")
+            //     .then((response) => response.json())
+            //     .then((data) => {
+            //         const aboutSection = document.querySelector("#about");
+            //         aboutSection.innerHTML = `
+            //             <h2 class="h4 text-custom">About Me</h2>
+            //             <img src="${data.avatar_url}" alt="${data.name}" style="max-width: 150px; border-radius: 10px;">
+            //             <p class="lead mb-4">${data.bio || "No bio available"}</p>
+            //             <p><strong>Public Repos:</strong> ${data.public_repos}</p>
+            //             <p><strong>Followers:</strong> ${data.followers}</p>
+            //             <p><strong>Following:</strong> ${data.following}</p>
+            //             <a href="${data.html_url}" target="_blank" class="btn btn-custom">Visit GitHub Profile</a>
+            //         `;
+            //     })
+            //     .catch((error) => console.error("Error fetching GitHub profile:", error));
+
+            // Fetch and render GitHub repositories
+            fetch("https://api.github.com/users/pahuldeep/repos")
+                .then((response) => response.json())
+                .then((data) => {
+                    const projectsSection = document.querySelector("#projects .row");
+                    projectsSection.innerHTML = "";
+
+                    const excludedRepos = ["pahuldeep", "pahuldeep.github.io", "Yolo_Label"];
+                    const filteredRepos = data.filter(
+                        (repo) => !excludedRepos.includes(repo.name)
+                    );
+
+                    const sortedRepos = filteredRepos.sort(
+                        (a, b) => new Date(b.updated_at) - new Date(a.updated_at)
+                    );
+
+                    const topRepos = sortedRepos.slice(0, 4);
+
+                    const fragment = document.createDocumentFragment();
+                    topRepos.forEach((repo) => {
+                        const div = document.createElement("div");
+                        div.className = "col";
+                        div.innerHTML = `
+                    <div class="projects-grid">
+                        <div class="project-card fade-in">
+                            <h5 class="project-title">${repo.name}</h5>
+                            <p class="project-description">${repo.description || "No description provided"}</p>
+                            <a href="${repo.html_url}" class="btn btn-custom" target="_blank">View Repo</a>
+                        </div>
+                    </div>
+                `;
+                        fragment.appendChild(div);
+                    });
+
+                    projectsSection.appendChild(fragment);
+                })
+                .catch((error) => console.error("Error fetching repos:", error));
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth",
+                    });
+                });
+            });
+
+            // Fetch and render Medium posts
+            async function fetchMediumPosts() {
+                try {
+                    const rssUrl = "https://medium.com/feed/@pahuldeep100";
+                    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}&t=${new Date().getTime()}`;
+                    const response = await fetch(apiUrl);
+                    const data = await response.json();
+
+                    if (data.status === "ok") {
+                        const posts = data.items;
+                        const postsContainer = document.getElementById("medium-posts");
+
+                        const fragment = document.createDocumentFragment();
+                        posts.forEach((post) => {
+                            const tempDiv = document.createElement("div");
+                            tempDiv.innerHTML = post.content;
+                            const firstImage = tempDiv.querySelector("img");
+                            const imageUrl = firstImage ? firstImage.src : "pahuldeep_new.jpg";
+
+                            const postElement = document.createElement("article");
+                            postElement.className = "row";
+                            postElement.innerHTML = `
+                        <div class="image-container"><img src="${imageUrl}" alt="${post.title}" class="post-image"></div>
+                        <div class="post-content">
+                            <h3 class="post-title">
+                                <a href="${post.link}" target="_blank" rel="noopener noreferrer" class="title-link">${post.title}</a>
+                            </h3>
+                            <div class="post-date">${new Date(post.pubDate).toLocaleDateString()}</div>
+                            <p class="post-description">${post.description.replace(/<[^>]*>/g, "").substring(0, 150)}...</p>
+                            <a href="${post.link}" target="_blank" rel="noopener noreferrer" class="read-more"> Read More → </a>
+                        </div>
+                    `;
+                            fragment.appendChild(postElement);
+                        });
+
+                        postsContainer.appendChild(fragment);
+                    }
+                } catch (error) {
+                    console.error("Error fetching Medium posts:", error);
+                    document.getElementById("medium-posts").innerHTML = `
+                <div class="col-span-full text-center text-gray-600">
+                    Unable to load blog posts at the moment. Please try again later.
+                </div>
+            `;
+                }
+            }
+
+            fetchMediumPosts();
+        });
+
+    </script>
 </body>
 
 </html>
